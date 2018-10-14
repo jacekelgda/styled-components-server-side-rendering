@@ -18,6 +18,7 @@ server.get('/', (req, res) => {
   const sheet = new ServerStyleSheet();
 
   const body = renderToString(sheet.collectStyles(<App />)); // <-- collecting styles
+  console.log(body)
   const styles = sheet.getStyleTags(); // <-- getting all the tags from the sheet
   const title = 'Server side Rendering with Styled Components';
 
