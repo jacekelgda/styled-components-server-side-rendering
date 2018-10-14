@@ -13,8 +13,7 @@
   },
   "author": "Dennis Brotzky <dennis@jobeir.com>",
   "license": "MIT",
-  "homepage":
-    "https://github.com/Jobeir/styled-components-server-side-rendering",
+  "homepage": "https://github.com/Jobeir/styled-components-server-side-rendering",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^7.1.2",
@@ -25,6 +24,7 @@
     "webpack-node-externals": "^1.2.0"
   },
   "dependencies": {
+    "botkit": "^0.6.16",
     "express": "^4.14.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
