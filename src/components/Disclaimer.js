@@ -1,5 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Component } from 'react'
 
-const Disclaimer = () => <p>Legal note: We are not responsible for your frustration.</p>
-
-export default Disclaimer
+export default class Disclaimer extends Component {
+  componentDidMount () {
+    console.log('component did mount ...')
+  }
+  render () {
+    return (<p>Disclaimer</p>)
+  }
+}

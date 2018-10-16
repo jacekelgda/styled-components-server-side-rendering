@@ -11,9 +11,22 @@ const bot = listener
   .spawn({ token: 'xoxb-448382339412-448562583826-zpQj3gKiLZQZYFcVi0GpMiLg' })
   .startRTM()
 
+const setupConvo = (bot, message, convo) => {
+  console.log('Setup convo ...')
+  convo.addMessage({
+      text: renderToString(<Mock message={message.text} />)
+    },
+    'bye'
+  )
+
+  convo.activate()
+  convo.gotoThread('bye')
+  console.log('Setup finished ...')
+}
+
 listener.on('direct_message', (bot, message) => {
   bot.startPrivateConversation(
     message,
-    (err, convo) => convo.say(renderToString(<Mock message={message.text} />))
+    (err, convo) => setupConvo(bot, message, convo)
   )
 })
